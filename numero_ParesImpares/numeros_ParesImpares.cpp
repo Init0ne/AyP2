@@ -25,6 +25,7 @@ vector<int> filtrarNumeros(const vector<int>& original, bool paridad);
 void mostrarVector(const vector<int>& vec, const string& mensaje);
 
 int main() {
+    srand(time(0));
     char continuar;
 
     do {
@@ -73,7 +74,6 @@ int main() {
 /// @return Un vector que contiene n números aleatorios entre 0 y 999.
 vector<int> generarNumerosAleatorios(int n) {
     vector<int> vector(n);
-    srand(time(0));
     for(int i = 0; i < n; i++) {
         vector[i] = rand() % 1000;
     }
